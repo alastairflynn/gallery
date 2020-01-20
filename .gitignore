@@ -1,5 +1,6 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
+db.sqlite3
 /images
 /static
 *__pycache__*
