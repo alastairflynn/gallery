@@ -1,0 +1,50 @@
+<div class="sidebar"> <!--*ngIf="!photoService.selectedPhoto"-->
+  <button type="button" (click)="ImportView()">+ Import</button>
+  <ul>
+    <li *ngFor="let year of years" class="l1">
+    <div class="collapsible">
+      <img src="/static/assets/menu.png" (click)="yearCollapse(year)" [@collapse]="year.linksVisible ? 'open' : 'closed'">
+      <a href="#{{year.num}}"><h1>{{year.num}}</h1></a>
+    </div>
+    <ul *ngIf="year.linksVisible">
+      <li *ngFor="let month of year.months" class="l2">
+      <div class="collapsible">
+        <img src="/static/assets/menu.png" (click)="monthCollapse(month)" [@collapse]="month.linksVisible ? 'open' : 'closed'">
+        <a href="#{{year.num}}-{{month.num}}" target="_self"><h2>{{month.days[0].photos[0].date | date:'MMMM y'}}</h2></a>
+      </div>
+      <ul *ngIf="month.linksVisible">
+        <li *ngFor="let day of month.days" class="l3">
+        <a href="#{{year.num}}-{{month.num}}-{{day.num}}"><h3>{{day.photos[0].date | date:'EE d MMM y'}}</h3></a>
+        </li>
+      </ul>
+      </li>
+    </ul>
+    </li>
+  </ul>
+</div>
+
+<div class="main"> <!--*ngIf="!photoService.selectedPhoto"-->
+  <ul>
+    <li *ngFor="let year of years" id="{{year.num}}">
+    <h1>{{year.num}}</h1>
+    <ul>
+      <li *ngFor="let month of year.months" id="{{year.num}}-{{month.num}}">
+      <h2>{{month.days[0].photos[0].date | date:'MMMM y'}}</h2>
+      <ul>
+        <li *ngFor="let day of month.days" id="{{year.num}}-{{month.num}}-{{day.num}}">
+        <div class="dayheader">
+          <h3>{{day.photos[0].date | date:'EEEE d MMMM y'}}</h3>
+          <h4 *ngIf="day.location">{{day.location}}</h4>
+        </div>
+        <ul>
+          <li *ngFor="let photo of day.photos" (click)="View(photo)">
+          <img src="{{photo.thumb}}">
+          </li>
+        </ul>
+        </li>
+      </ul>
+      </li>
+    </ul>
+    </li>
+  </ul>
+</div>

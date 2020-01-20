@@ -1,0 +1,20 @@
+<div class="import" *ngIf="photoService.importView">
+  <button type="button" (click)="Back()">&lt; Back to Gallery</button>
+  <table>
+    <tr>
+      <th>Paths</th>
+      <th><button type="button" (click)="refreshAll()">Refresh library</button></th>
+      <th><button type="button" (click)="removeAll()">Remove all</button></th>
+    </tr>
+    <tr>
+      <td><input #inputBox></td>
+      <td><button type="button" (click)="addPath(inputBox.value); inputBox.value=''">Add path</button></td>
+      <td></td>
+    </tr>
+    <tr *ngFor="let path of paths">
+      <td>{{path.path}}</td>
+      <td><button type="button" (click)="refreshPath(path)">Refresh</button></td>
+      <td><button type="button" (click)="removePath(path)">Remove</button></td>
+    </tr>
+  </table>
+</div>

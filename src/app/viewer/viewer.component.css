@@ -1,0 +1,14 @@
+.main {
+  background-color: black;
+}
+
+.main img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.sidebar h1 {
+  padding-top: 10px;
+  word-wrap: break-word;
+}

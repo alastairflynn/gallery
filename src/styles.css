@@ -1,1 +1,70 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+  background-color: #242424;
+	color: #eee;
+  font-family: sans-serif;
+  font-size: 20px;
+}
+
+button {
+  background-color: #242424;
+  color: #eee;
+  border: 1px solid #444;
+  border-radius: 3px;
+  font-size: 100%;
+}
+
+input {
+  background-color: #242424;
+  color: #eee;
+  border: 1px solid #444;
+  border-radius: 3px;
+  font-size: 100%;
+}
+
+a {
+  color: #eee;
+  text-decoration: none;
+}
+
+.sidebar {
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 180px; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #121212;
+/*   border-right: 1px solid #444; */
+/*   overflow-x: hidden; /* Disable horizontal scroll */
+  padding: 20px 10px 0 10px;
+}
+
+.sidebar h1 {
+  font-size: 12px;
+}
+
+.sidebar h2 {
+  font-size: 12px;
+}
+
+.sidebar h3 {
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.sidebar p {
+  font-size: 12px;
+}
+
+.main {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin-left: 200px; /* Same as the width of the sidebar */
+  padding: 0;
+/*   background-color: #242424; */
+}

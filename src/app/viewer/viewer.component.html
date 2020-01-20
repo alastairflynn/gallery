@@ -1,0 +1,18 @@
+<div class="sidebar">
+  <button type="button" (click)="Back()">&lt; Back</button>
+  <h1>{{photoService.selectedPhoto.name}}</h1>
+  <p>{{photoService.selectedPhoto.width}} x {{photoService.selectedPhoto.height}}</p>
+  <p>{{filesize}}</p>
+  <p>{{photoService.selectedPhoto.date | date:'H:mm:ss z'}}</p>
+  <p>{{photoService.selectedPhoto.date | date:'EEEE d MMMM y'}}</p>
+  <p *ngIf="location">{{location.display_name}}</p>
+  <h1>{{photoService.selectedPhoto.camera_make}} {{photoService.selectedPhoto.camera_model}}</h1>
+  <p>f/{{photoService.selectedPhoto.f_value}}</p>
+  <p>1/{{photoService.selectedPhoto.exposure}}</p>
+  <p>{{photoService.selectedPhoto.focal_length}}mm</p>
+  <p>ISO {{photoService.selectedPhoto.iso}}</p>
+</div>
+
+<div class="main">
+  <img src="{{photoService.selectedPhoto.src}}" id="image">
+</div>
