@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { PhotoService } from './photo.service';
+import { PhotoService } from './mock.service';
 
 @Component({
   selector: 'app-root',

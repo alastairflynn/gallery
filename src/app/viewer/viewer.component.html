@@ -11,8 +11,11 @@
   <p>1/{{photoService.selectedPhoto.exposure}}</p>
   <p>{{photoService.selectedPhoto.focal_length}}mm</p>
   <p>ISO {{photoService.selectedPhoto.iso}}</p>
+  <div class="map" id="map" [style.z_index]="location ? 1 : 0"></div>
 </div>
 
-<div class="main">
-  <img src="{{photoService.selectedPhoto.src}}" id="image">
+<div class="main" (mousedown)="startDrag($event)" (mouseup)="stopDrag($event)" (mousemove)="drag($event)">
+  <div class="draggable" id="dragElement" [style.top.px]="y" [style.left.px]="x" [style.width.px]="width" [style.height.px]="height" [style.cursor]="dragging ? 'grabbing' : 'grab'">
+    <img src="{{photoService.selectedPhoto.src}}" id="image">
+  </div>
 </div>

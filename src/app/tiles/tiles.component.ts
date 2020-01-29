@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { style, state, animate, transition, trigger } from '@angular/animations';
 import { Photo, DayDivider, MonthDivider, YearDivider } from '../photo';
-import { PhotoService } from '../photo.service';
+import { PhotoService } from '../mock.service';
 import { GeocodingService } from '../geocoding.service';
 
 @Component({

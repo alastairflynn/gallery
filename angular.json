@@ -25,8 +25,10 @@
             ],
             "styles": [
               "src/styles.css",
+              "node_modules/leaflet/dist/leaflet.css"
             ],
             "scripts": [
+              "node_modules/leaflet/dist/leaflet.js"
             ]
           },
           "configurations": {
@@ -91,8 +93,10 @@
             ],
             "styles": [
               "src/styles.css",
+              "node_modules/leaflet/dist/leaflet.css"
             ],
             "scripts": [
+              "node_modules/leaflet/dist/leaflet.js"
             ]
           }
         },

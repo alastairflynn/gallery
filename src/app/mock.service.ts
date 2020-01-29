@@ -10,11 +10,11 @@ export class PhotoService {
   selectedPhoto: Photo;
   importView: boolean = false;
 
-  private photos: Photo[] = [/*{
-    id: 10,
-    src: 'assets/images/12/07/IMG_20190707_121557.jpg',
-    thumb: 'assets/images/thumbs/121.webp',
-    belongs_to: 12,
+  private photos: Photo[] = [{
+    id: 495,
+    src: 'assets/images/21/IMG_20190707_121557.jpg',
+    thumb: 'assets/images/thumbs/21/495.webp',
+    belongs_to: 21,
     date: '2019-07-07T12:15:57+00:00',
     width: 4000,
     height: 3000,
@@ -28,7 +28,7 @@ export class PhotoService {
     exposure: 837,
     focal_length: 3.82,
     iso: 100
-  }, */{
+  }/*, {
     id: 437,
     src: 'assets/images/24/DSCN0442.JPG',
     thumb: 'assets/images/thumbs/24/437.webp',
@@ -46,8 +46,8 @@ export class PhotoService {
     exposure: 400,
     focal_length: 4.6,
     iso: 80
-  }];
-  private paths: Path[] = [{ path:'/home/alastair/Pictures/2019/01', id:24 }];
+  }*/];
+  private paths: Path[] = [{ path:'/home/alastair/Pictures/2019/07', id:21 }];
 
   constructor() { }
 

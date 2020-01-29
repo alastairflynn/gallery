@@ -2,6 +2,7 @@
 
 db.sqlite3
 /images
+/src/assets/images
 /static
 *__pycache__*
 
